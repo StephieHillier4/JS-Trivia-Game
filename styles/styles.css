@@ -1,5 +1,5 @@
 html {
-    background: linear-gradient(rgb(11, 11, 11)0%, rgb(11, 11, 11)10%, rgb(232, 193, 53)15%, rgb(243, 3, 3)30%, rgb(40, 92, 223)65%);
+    background: linear-gradient(rgb(11, 11, 11)0%, rgb(11, 11, 11)5%, rgb(232, 193, 53)15%, rgb(211, 3, 3)30%, rgb(40, 92, 223)65%);
     scroll-behavior: smooth;
 }
 
@@ -7,17 +7,16 @@ body {
     margin: 0;
     padding: 0;
     
-    
 }
 
 .oval-container {
-    width: 750px;
-    height: 200px;
+    width: 1400px;
+    height: 500px;
     background-color:rgb(232, 193, 53);
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2rem;
+    margin-top: 5rem;
 }
 
 .game-headings {
@@ -26,9 +25,14 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: rgb(243, 3, 3);
+    color: rgb(211, 3, 3);
     height: 100%;
     
+}
+
+h1{
+    font-size: 90px;
+    margin-top: -100px;
 }
 
 .special-font {
@@ -40,22 +44,23 @@ body {
     transform: scaleY(2);          
     line-height: 1.2; 
     font-weight: bold;  
+    font-size: 5rem;
 }
 .title, .subtitle {
-    margin: 0;
     margin-bottom: 1rem;
     font-weight: 100;
 }
 
 .subtitle {
-    font-size: 25px;
-    margin-top: 1rem;
+    font-size: 50px;
+    margin-top: 4rem;
 }
 
 .main-image {
     object-fit: cover;
-    width: 700px;
-    margin-top: 2rem;
+    width: 90%;
+    height: 1300px;
+    margin-top: 8rem;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -63,8 +68,8 @@ body {
 }
 
 .h2-container {
-    width: 350px;
-    height: 80px;
+    width: 1200px;
+    height: 200px;
     background-color: rgb(232, 193, 53);  
     border-radius: 50%;
     margin-left: auto;
@@ -72,14 +77,17 @@ body {
     display: flex;               
     justify-content: center;    
     align-items: center; 
-    margin-top: 3rem; 
+    margin-top: 15rem; 
     margin-bottom: 3rem;
 }
 
+.h2-container p {
+    font-size: 100px;
+}
+
 .main-cast {
-    color: rgb(243, 3, 3);
+    color: rgb(211, 3, 3);
     text-align: center;
-    font-size: 40px;
 }
 
 .cast {
@@ -87,6 +95,7 @@ body {
     justify-content: space-around;
     align-items: center;
     gap: 10px;
+    margin-top: 15rem;
 }
 
 .character {
@@ -97,8 +106,8 @@ body {
 }
 .character img {
     object-fit: cover;
-    width: 200px;
-    height: 300px;
+    width: 450px;
+    height: 800px;
     transition: all 0.3s ease; 
     transform: scale(1); 
     box-shadow: 0px 5px 15px black;
@@ -115,7 +124,7 @@ figcaption {
 }
 
 .name {
-    font-size: 25px;
+    font-size: 60px;
     margin-top: 0.5rem;
 }
 
@@ -126,14 +135,18 @@ figcaption {
     
 }
 
+.buttons a {
+    margin-top: 15rem;
+}
+
 .first-button {
     background-color: rgb(232, 193, 53);
-    color:rgb(243, 3, 3);
+    color:rgb(211, 3, 3);
     margin-top: 4rem;
     margin-bottom: 1rem;
-    height: 3rem;
-    font-size: 1.5rem;
-    width: 15rem;
+    width: 40rem;
+    height: 7rem;
+    font-size: 60px;
     border-radius: 50%;
     display: flex;                
     justify-content: center;
@@ -152,12 +165,12 @@ figcaption {
 
 .second-button {
     background-color: rgb(232, 193, 53);
-    color:rgb(243, 3, 3);
+    color:rgb(211, 3, 3);
     margin-top: 4rem;
     margin-bottom: 1rem;
-    height: 3rem;
-    font-size: 1.5rem;
-    width: 15rem;
+    width: 40rem;
+    height: 7rem;
+    font-size: 60px;
     border-radius: 50%;
     display: flex;                
     justify-content: center;
@@ -175,14 +188,14 @@ figcaption {
 
 .bonus-option {
     background-color: rgb(232, 193, 53);
-    color:rgb(243, 3, 3);
-    margin-top: 4rem;
+    color:rgb(211, 3, 3);
+    margin-top: 15rem;
     margin-bottom: 1rem;
     margin-left: auto;
     margin-right: auto;
-    width: 15rem;
-    height: 3rem;
-    font-size: 1.5rem;
+    width: 40rem;
+    height: 7rem;
+    font-size: 60px;
     border-radius: 50%;
     display: flex;                
     justify-content: center;
@@ -202,14 +215,15 @@ figcaption {
 .score-keeper {
     display: flex;
     justify-content: space-around;
-    margin-top: 5rem;
-    font-size: 1.5rem;
+    margin-top: 10rem;
+    font-size: 60px;
     color: rgb(232, 193, 53);
 }
 
 .play-container {
-    width: 800px;
-    height: 400px;
+    width: 95%; 
+    max-width: 1800px;
+    height: 1000px; 
     background-color: rgb(232, 193, 53);
     border-radius: 50%;
     margin-left: auto;
@@ -218,77 +232,88 @@ figcaption {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.play-container p {
- margin-right: 3rem;
- margin-left: 4rem;
- margin-top: 1.2rem;
- font-size: 18px;
- color: rgb(243, 3, 3);
- 
+    padding: 2rem; 
 }
 
 .play-container h2 {
-    font-size: 30px;
-    color: rgb(243, 3, 3);
-    
+    font-size: 90px;
+    color: rgb(211, 3, 3);
 }
 
+.play-container p {
+    margin-right: 2rem; 
+    margin-left: 2rem;  
+    margin-top: 1rem;   
+    font-size: 40px;
+    color: rgb(211, 3, 3);
+    word-wrap: break-word;  
+    overflow-wrap: break-word; 
+    text-align: center; 
+    line-height: 1.5; 
+}
+
+
 .bonus-container {
-    width: 800px;
-    height: 300px;
+    width: 95%; 
+    max-width: 1800px;
+    height: 900px; 
     background-color: rgb(232, 193, 53);
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2rem;
+    margin-top: 15rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.bonus-container p {
- margin-right: 3rem;
- margin-left: 4rem;
- margin-top: 0;
- font-size: 18px;
- color: rgb(243, 3, 3);
- 
+    padding: 2rem; 
 }
 
 .bonus-container h2 {
-    font-size: 30px;
-    color: rgb(243, 3, 3);
+    font-size: 90px;
+    color: rgb(211, 3, 3);
 }
 
+.bonus-container p {
+    margin-right: 2rem; 
+    margin-left: 2rem;  
+    margin-top: 1rem;   
+    font-size: 40px;
+    color: rgb(211, 3, 3);
+    word-wrap: break-word;  
+    overflow-wrap: break-word; 
+    text-align: center; 
+    line-height: 1.5; 
+}
 .fun-container {
-    width: 800px;
-    height: 200px;
+    width: 95%; 
+    max-width: 1800px;
+    height: 600px; 
     background-color: rgb(232, 193, 53);
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 15rem;
+    margin-bottom: 10rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.fun-container p {
- margin-right: 3rem;
- margin-left: 4rem;
- margin-top: 0;
- font-size: 18px;
- color: rgb(243, 3, 3);
- 
+    padding: 2rem; 
 }
 
 .fun-container h2 {
-    font-size: 30px;
-    color: rgb(243, 3, 3);
-    
+    font-size: 90px;
+    color: rgb(211, 3, 3);
 }
 
+.fun-container p {
+    margin-right: 2rem; 
+    margin-left: 2rem;  
+    margin-top: 1rem;   
+    font-size: 40px;
+    color: rgb(211, 3, 3);
+    word-wrap: break-word;  
+    overflow-wrap: break-word; 
+    text-align: center; 
+    line-height: 1.5; 
+}
 
