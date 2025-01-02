@@ -1,5 +1,5 @@
 html {
-    background: linear-gradient(rgb(11, 11, 11)0%, rgb(11, 11, 11)30%, rgb(232, 193, 53)35%, rgb(243, 3, 3)50%, rgb(40, 92, 223)65%);
+    background: linear-gradient(rgb(11, 11, 11)0%, rgb(11, 11, 11)10%, rgb(232, 193, 53)15%, rgb(243, 3, 3)30%, rgb(40, 92, 223)65%);
     scroll-behavior: smooth;
 }
 
@@ -11,7 +11,7 @@ body {
 }
 
 .oval-container {
-    width: 850px;
+    width: 750px;
     height: 200px;
     background-color:rgb(232, 193, 53);
     border-radius: 50%;
@@ -146,7 +146,7 @@ figcaption {
 
 .first-button:hover {
     transform: scale(1.1); 
-    box-shadow: 0px 15px 30px black;
+    box-shadow: 10px 15px 30px black;
 } 
 
 
@@ -157,7 +157,6 @@ figcaption {
     margin-bottom: 1rem;
     height: 3rem;
     font-size: 1.5rem;
-    box-shadow: 10px 15px 15px black;
     width: 15rem;
     border-radius: 50%;
     display: flex;                
@@ -171,10 +170,125 @@ figcaption {
 
 .second-button:hover {
     transform: scale(1.1); 
-    box-shadow: 0px 15px 30px black;
+    box-shadow: 10px 15px 30px black;
 } 
 
-#how-to-play p{
-    margin-left: 1rem;
-    margin-right: 1rem;
+.bonus-option {
+    background-color: rgb(232, 193, 53);
+    color:rgb(243, 3, 3);
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    display: flex;                
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.3s ease; 
+    transform: scale(1); 
+    box-shadow: 10px 15px 15px black;
+    font-family: 'Times New Roman', Times, serif;
 }
+
+.bonus-option:hover {
+    transform: scale(1.1); 
+    box-shadow: 10px 15px 30px black;
+} 
+
+.score-keeper {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5rem;
+    font-size: 1.5rem;
+    color: rgb(232, 193, 53);
+}
+
+.play-container {
+    width: 800px;
+    height: 400px;
+    background-color: rgb(232, 193, 53);
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.play-container p {
+ margin-right: 3rem;
+ margin-left: 4rem;
+ margin-top: 1.2rem;
+ font-size: 18px;
+ color: rgb(243, 3, 3);
+ 
+}
+
+.play-container h2 {
+    font-size: 30px;
+    color: rgb(243, 3, 3);
+    
+}
+
+.bonus-container {
+    width: 800px;
+    height: 300px;
+    background-color: rgb(232, 193, 53);
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bonus-container p {
+ margin-right: 3rem;
+ margin-left: 4rem;
+ margin-top: 0;
+ font-size: 18px;
+ color: rgb(243, 3, 3);
+ 
+}
+
+.bonus-container h2 {
+    font-size: 30px;
+    color: rgb(243, 3, 3);
+}
+
+.fun-container {
+    width: 800px;
+    height: 200px;
+    background-color: rgb(232, 193, 53);
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fun-container p {
+ margin-right: 3rem;
+ margin-left: 4rem;
+ margin-top: 0;
+ font-size: 18px;
+ color: rgb(243, 3, 3);
+ 
+}
+
+.fun-container h2 {
+    font-size: 30px;
+    color: rgb(243, 3, 3);
+    
+}
+
+
