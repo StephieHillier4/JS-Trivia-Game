@@ -2,10 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Seinfeld Trivia Game</title>
     <link rel="stylesheet" href="styles/styles.css" />
-    <script src="script.js" defer></script>
+    <script src="script/script.js" defer></script>
   </head>
   <body>
     <div class="oval-container">
@@ -24,54 +23,70 @@
 
     <div class="cast">
       <div class="character">
-        <img src="gerryseinfeld.jpg" alt="Jerry Seinfeld" />
+        <img src="jerryseinfeld.jpg" class="character-image" id="jerry" alt="Jerry">
         <figcaption class="name">Jerry</figcaption>
       </div>
 
       <div class="character">
-        <img src="elainebenes.jpg" alt="Elaine Benes" />
+        <img src="elainebenes.jpg" class="character-image" id="elaine" alt="Elaine">
         <figcaption class="name">Elaine</figcaption>
       </div>
 
       <div class="character">
-        <img src="georgeconstanza.jpg" alt="George Costanza" />
+        <img src="georgeconstanza.jpg" class="character-image" id="george" alt="George">
         <figcaption class="name">George</figcaption>
       </div>
 
       <div class="character">
-        <img src="kramer.jpg" alt="Cosmo Kramer" />
-        <figcaption class="name">Cosmo</figcaption>
+        <img src="kramer.jpg" class="character-image" id="kramer" alt="Kramer">
+        <figcaption class="name">Kramar</figcaption>
       </div>
     </div>
 
     <div class="buttons">
       <a href="#how-to-play" class="first-button"> How to Play </a>
-      <a href="#start-seinfeld-trivia" class="second-button"> Start Seinfeld Trivia </a>
+      <a href="#start-seinfeld-trivia" class="second-button">
+        Start Seinfeld Trivia
+      </a>
     </div>
 
-
     <button class="bonus-option">Bonus Question</button>
-    
 
     <div class="score-keeper">
-        <div class="score">
-            <p>Current Score:</p>
-        </div>
+      <div class="score">
+        <h4>Current Score:</h4>
+        <p id="score-number">0</p>
+      </div>
 
-        <div class="wrong">
-            <p>Wrong Answers:</p>
-        </div>
+      <div class="wrong">
+        <h4>Wrong Answers:</h4>
+        <p id="wrong-number">0</p>
+      </div>
 
-        <div class="bonus">
-            <p>Bonus Questions Left:</p>
-        </div>
+      <div class="bonus">
+        <h4>Bonus Questions Left:</h4>
+        <p id="bonus-number">4</p>
+      </div>
     </div>
 
     <section id="how-to-play">
       <div class="play-container">
         <h2>How to Play</h2>
         <p>
-          Welcome to my Seinfeld Trivia Game! To get started, simply click on the "Start Seinfeld Trivia" link. A "bonus questions" button will appear and your score keeper will be activated. There are 40 questions in total, 10 questions on each main character, plus a BONUS SECTION. A player has the option to click on the character image to generate a question about that particular character up to max of 10 times per game, then the questions for that character are maxed out. Each question will have multiple choice style answers that are worth 5 points for each correct answer and with each wrong answer, a player loses 5 points. Once a player reaches 40 points, they WIN! If a player gets more than 4 questions wrong, they LOSE! A player's current score and the number of wrong answers they have will show below the "How to Play" and "Start Seinfeld Trivia" buttons so it's easy to keep track of their progress.
+          Welcome to my Seinfeld Trivia Game! To get started, simply click on
+          the "Start Seinfeld Trivia" link. A "bonus questions" button will
+          appear and your score tracker will be activated. There are 40
+          questions in total, 10 questions on each main character, plus a BONUS
+          SECTION. A player has the option to click on the character image to
+          generate a question about that particular character up to max of 10
+          times per game, then the questions for that character are maxed out.
+          Each question will have multiple choice style answers that are worth 5
+          points for each correct answer and with each wrong answer, a player
+          loses 5 points. Once a player reaches 40 points, they WIN! If a player
+          gets more than 4 questions wrong, they LOSE! A player's current score
+          and the number of wrong answers they have will show below the "How to
+          Play" and "Start Seinfeld Trivia" buttons so it's easy to keep track
+          of their progress.
         </p>
       </div>
 
@@ -87,7 +102,8 @@
           player can choose which main character they want to test their
           knowledge on. HOWEVER, there are NO multiple choice answers and should
           a player choose a bonus question and get it wrong they automatically
-          LOSE the game! The score keeper will also keep track of how many bonus questions a player has left to use.
+          LOSE the game! The score tracker will also keep track of how many
+          bonus questions a player has left to use.
         </p>
       </div>
 
