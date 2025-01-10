@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const bonusAnswersContainer = document.querySelector("#bonusAnswerInput");
   const submitBonusAnswerButton = document.querySelector("#submitBonusAnswer");
 
+  //   testind audio //
+  const backgroundMusic = document.getElementById("backgroundMusic");
+  //   //  //
   startButton.classList.add("start-button-glow");
   bonusButton.style.display = "block";
 
@@ -45,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let gameStarted = false;
 
-//   REGULAR GAME MODE QUESTIONS //
+  //   REGULAR GAME MODE QUESTIONS //
   const questions = {
     jerry: [
       {
@@ -363,9 +366,9 @@ document.addEventListener("DOMContentLoaded", () => {
     ],
   };
 
-//   BONUS QUESTIONS //
+  //   BONUS QUESTIONS //
 
-const bonusQuestions = {
+  const bonusQuestions = {
     jerry: [
       {
         question:
@@ -392,15 +395,19 @@ const bonusQuestions = {
     ],
   };
 
-//  SCORE RESET SECTION //
+  //  SCORE RESET SECTION //
   function updateScoreDisplay() {
     scoreNumberElement.textContent = score;
     wrongNumberElement.textContent = wrongAnswers;
     bonusNumberElement.textContent = bonusQuestionsLeft;
   }
 
-//  START GAME SECTION //
+  //  START GAME SECTION //
   function startGameEffects() {
+    backgroundMusic.play();
+    backgroundMusic.currentTime = 0;
+    backgroundMusic.volume = 0.4;
+
     const images = document.querySelectorAll(".character img");
 
     images.forEach((image) => {
@@ -449,16 +456,15 @@ const bonusQuestions = {
       } else {
         const character = this.id;
 
-        
         if (allAnsweredBonus[character]) {
-            alert(`All questions for ${character} have been answered!`);
-            return;
-          } else {
-            displayBonusQuestions(character);
-          }
-       
+          alert(`All questions for ${character} have been answered!`);
+          return;
+        } else {
+          displayBonusQuestions(character);
+        }
+
         allAnsweredBonus[character] = true; // mark them as answered, AFTER
-        // displayBonusQuestions is called 
+        // displayBonusQuestions is called
       }
     });
   });
@@ -646,7 +652,7 @@ const bonusQuestions = {
     }, 3000);
   }
 
-//   RESET GAME SECTION //
+  //   RESET GAME SECTION //
   function resetGame() {
     gameStarted = false;
     const images = document.querySelectorAll(".character img");
@@ -674,21 +680,19 @@ const bonusQuestions = {
 
     updateScoreDisplay();
   }
-// ENTIRE BONUS SECTION //
+  // ENTIRE BONUS SECTION //
 
-// BONUS CONSTS //
-// const bonusButton = document.querySelector(".bonus-option");
-//   const bonusQuestionContainer = document.querySelector(".bonus-question-container");
-//   const bonusNumberElement = document.querySelector("#bonus-number");
-//   const bonusQuestionTitle = document.querySelector("#bonusQuestionTitle");
-//   const bonusAnswersContainer = document.querySelector("#bonusAnswerInput");
-//   const submitBonusAnswerButton = document.querySelector("#submitBonusAnswer");
+  // BONUS CONSTS //
+  // const bonusButton = document.querySelector(".bonus-option");
+  //   const bonusQuestionContainer = document.querySelector(".bonus-question-container");
+  //   const bonusNumberElement = document.querySelector("#bonus-number");
+  //   const bonusQuestionTitle = document.querySelector("#bonusQuestionTitle");
+  //   const bonusAnswersContainer = document.querySelector("#bonusAnswerInput");
+  //   const submitBonusAnswerButton = document.querySelector("#submitBonusAnswer");
 
-//   bonusButton.style.display = "block";
+  //   bonusButton.style.display = "block";
 
-  
-
-//   BONUS EVENT LISTENERS //
+  //   BONUS EVENT LISTENERS //
   bonusButton.addEventListener("click", () => {
     if (!gameStarted) {
       alert("Please start the game first!");
@@ -705,7 +709,7 @@ const bonusQuestions = {
         "You're now in Bonus Mode! Double the points for correct answers, but one wrong answer ends the game! Please choose a character for a bonus question."
       );
 
-    //   bonusAnswerInput.value = "";
+      //   bonusAnswerInput.value = "";
       document.querySelector("#bonusFeedback").textContent = "";
 
       if (!bonusQuestions || bonusQuestions.length === 0) {
@@ -719,33 +723,30 @@ const bonusQuestions = {
     }
   });
 
-  submitBonusAnswerButton.addEventListener("click", () =>
-      checkBonus()
-    );
- 
-//  BONUS FUNCTIONS //
-let correctAnswer;
-function displayBonusQuestions(character) {
-  bonusQuestionContainer.style.display = "block";
-  bonusQuestionTitle.textContent = bonusQuestions[character][0].question;
-  correctAnswer = bonusQuestions[character][0].answer;
-}
+  submitBonusAnswerButton.addEventListener("click", () => checkBonus());
+
+  //  BONUS FUNCTIONS //
+  let correctAnswer;
+  function displayBonusQuestions(character) {
+    bonusQuestionContainer.style.display = "block";
+    bonusQuestionTitle.textContent = bonusQuestions[character][0].question;
+    correctAnswer = bonusQuestions[character][0].answer;
+  }
 
   function checkBonus() {
     let userInput = bonusAnswersContainer.value.trim();
-    
+
     if (userInput === correctAnswer.trim()) {
-     
-        bonusButtonActive = false; 
-        
-        bonusQuestionContainer.style.display = "none";
-        bonusAnswersContainer.value = "";
-        correctAnswer="";
-        userInput="";
-        score += 10;
-        updateScoreDisplay();
-        console.log(score)
-        
+      bonusButtonActive = false;
+
+      bonusQuestionContainer.style.display = "none";
+      bonusAnswersContainer.value = "";
+      correctAnswer = "";
+      userInput = "";
+      score += 10;
+      updateScoreDisplay();
+      console.log(score);
+
       if (score >= 40 && !document.querySelector(".win-message")) {
         backgroundOverlay.style.display = "block";
 
@@ -790,9 +791,7 @@ function displayBonusQuestions(character) {
     } else {
       gameOver();
     }
-    
   }
-
 
   function gameOver() {
     if (bonusQuestionContainer) {
@@ -832,6 +831,8 @@ function displayBonusQuestions(character) {
     setTimeout(() => {
       loseMessage.remove();
       gif.remove();
+      backgroundMusic.pause();
+      backgroundMusic.currentTime = 0;
       resetGame();
       updateScoreDisplay();
     }, 4000);
