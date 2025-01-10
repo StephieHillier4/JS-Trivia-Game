@@ -706,7 +706,7 @@ document.addEventListener("DOMContentLoaded", () => {
       bonusQuestionsLeft--;
       bonusButtonActive = true;
       alert(
-        "You're now in Bonus Mode! Double the points for correct answers, but one wrong answer ends the game! Please choose a character for a bonus question."
+        "You're now in Bonus Mode! Double the points for correct answers, but one wrong answer ends the game! Please choose a character for a bonus question and remember to use a capital letter to start your answers."
       );
 
       //   bonusAnswerInput.value = "";
@@ -745,7 +745,9 @@ document.addEventListener("DOMContentLoaded", () => {
       userInput = "";
       score += 10;
       updateScoreDisplay();
-      console.log(score);
+
+      alert("Correct! You earned 10 points for the bonus question! 🎉");
+    
 
       if (score >= 40 && !document.querySelector(".win-message")) {
         backgroundOverlay.style.display = "block";
