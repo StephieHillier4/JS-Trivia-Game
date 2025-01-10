@@ -450,12 +450,6 @@ const bonusQuestions = {
         const character = this.id;
 
         
-        // we need to do some kind of check here, to see whether the question for this
-        // character has been asked or not.
-        
-        // we should just mark the character as having been questioned at this point
-        // because either they get it right, and thats true
-        // or they get it wrong, and it resets anyway
         if (allAnsweredBonus[character]) {
             alert(`All questions for ${character} have been answered!`);
             return;
@@ -736,14 +730,14 @@ function displayBonusQuestions(character) {
   bonusQuestionTitle.textContent = bonusQuestions[character][0].question;
   correctAnswer = bonusQuestions[character][0].answer;
 }
-//   not sure if it's the character not being cleared in between bonus question selection line.418 //
+
   function checkBonus() {
     let userInput = bonusAnswersContainer.value.trim();
     
     if (userInput === correctAnswer.trim()) {
-      // answer was right
-        bonusButtonActive = false; // turn off bonus mode, so next question
-        // is back in regular mode
+     
+        bonusButtonActive = false; 
+        
         bonusQuestionContainer.style.display = "none";
         bonusAnswersContainer.value = "";
         correctAnswer="";
