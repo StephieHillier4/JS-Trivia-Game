@@ -8,11 +8,15 @@
     <script src="script/script.js" defer></script>
   </head>
   <body>
-    <!-- testing audio -->
+    
     <div class="audio">
         <audio id="backgroundMusic" src="audio/Seinfeld.mp3" loop></audio>
     </div>
-<!-- testing audio -->
+
+    <div class="button-audio">
+        <audio id="clickSound" src="audio/pick-92276.mp3" preload="auto"></audio>
+    </div>
+
     <div class="oval-container">
       <div class="game-headings">
         <h1 class="title"><span class="special-font">Seinfeld</span> Trivia</h1>
@@ -21,7 +25,7 @@
         </p>
       </div>
     </div>
-    <img class="main-image" src="Seinfeld.jpg" alt="Seinfeld Cast Poster" />
+    <img class="main-image" src="seinfeldposter.jpg" alt="Seinfeld Cast Poster" />
 
     <div class="h2-container">
       <p class="main-cast">Main Cast</p>
@@ -49,20 +53,20 @@
       </div>
     </div>
 
-    <div class="question-container" style="display: none;">
+    <div class="question-container"     style="display: none;">
         <h2 id="question-title"></h2>
         <div id="answers-container">
         </div>
     </div>
 
     <div class="buttons">
-      <a href="#how-to-play" class="first-button"> How to Play </a>
-      <a href="#start-seinfeld-trivia" class="second-button">
+      <a href="#how-to-play" class="first-button clickable" > How to Play </a>
+      <a href="#start-seinfeld-trivia" class="second-button clickable">
         Start Seinfeld Trivia
       </a>
     </div>
 
-    <button class="bonus-option inactive">Bonus Question</button>
+    <button class="bonus-option inactive clickable">Bonus Question</button>
 
     <div class="bonus-question-container" id="bonusQuestionContainer" style="display: none;">
         <h2 id="bonusQuestionTitle">Bonus Question</h2>

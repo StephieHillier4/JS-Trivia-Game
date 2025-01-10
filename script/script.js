@@ -18,10 +18,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const bonusQuestionTitle = document.querySelector("#bonusQuestionTitle");
   const bonusAnswersContainer = document.querySelector("#bonusAnswerInput");
   const submitBonusAnswerButton = document.querySelector("#submitBonusAnswer");
-
-  //   testind audio //
   const backgroundMusic = document.getElementById("backgroundMusic");
-  //   //  //
+
+  const clickSound = document.getElementById("clickSound");
+  const clickableButtons = document.querySelectorAll(".clickable");
+
+
   startButton.classList.add("start-button-glow");
   bonusButton.style.display = "block";
 
@@ -428,6 +430,7 @@ document.addEventListener("DOMContentLoaded", () => {
   startButton.addEventListener("click", () => {
     startGameEffects();
     bonusButton.classList.remove("inactive");
+    clickSound.play();
   });
 
   document.body.appendChild(backgroundOverlay);
@@ -463,8 +466,7 @@ document.addEventListener("DOMContentLoaded", () => {
           displayBonusQuestions(character);
         }
 
-        allAnsweredBonus[character] = true; // mark them as answered, AFTER
-        // displayBonusQuestions is called
+        allAnsweredBonus[character] = true;
       }
     });
   });
@@ -709,7 +711,6 @@ document.addEventListener("DOMContentLoaded", () => {
         "You're now in Bonus Mode! Double the points for correct answers, but one wrong answer ends the game! Please choose a character for a bonus question and remember to use a capital letter to start your answers."
       );
 
-      //   bonusAnswerInput.value = "";
       document.querySelector("#bonusFeedback").textContent = "";
 
       if (!bonusQuestions || bonusQuestions.length === 0) {
@@ -747,7 +748,6 @@ document.addEventListener("DOMContentLoaded", () => {
       updateScoreDisplay();
 
       alert("Correct! You earned 10 points for the bonus question! 🎉");
-    
 
       if (score >= 40 && !document.querySelector(".win-message")) {
         backgroundOverlay.style.display = "block";
@@ -784,6 +784,8 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => {
           winMessage.style.display = "none";
           gif.style.display = "none";
+          backgroundMusic.pause();
+          backgroundMusic.currentTime = 0;
           resetGame();
 
           backgroundOverlay.style.display = "none";

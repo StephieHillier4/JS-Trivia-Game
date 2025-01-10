@@ -1,5 +1,5 @@
 html {
-    background: linear-gradient(rgb(11, 11, 11)0%, rgb(11, 11, 11)5%, rgb(232, 193, 53)15%, rgb(211, 3, 3)30%, rgb(40, 92, 223)65%);
+    background: linear-gradient(rgb(11, 11, 11)0%, rgb(11, 11, 11)10%, rgb(232, 193, 53)20%, rgb(211, 3, 3)30%, rgb(40, 92, 223)65%);
     scroll-behavior: smooth;
 }
 
@@ -10,8 +10,8 @@ body {
 }
 
 .oval-container {
-    width: 1400px;
-    height: 500px;
+    width: 900px;
+    height: 200px;
     background-color:rgb(232, 193, 53);
     border-radius: 50%;
     margin-left: auto;
@@ -31,8 +31,8 @@ body {
 }
 
 h1{
-    font-size: 90px;
-    margin-top: -100px;
+    font-size: 40px;
+    margin-top: -30px;
 }
 
 .special-font {
@@ -44,7 +44,7 @@ h1{
     transform: scaleY(2);          
     line-height: 1.2; 
     font-weight: bold;  
-    font-size: 5rem;
+    font-size: 30px;
 }
 .title, .subtitle {
     margin-bottom: 1rem;
@@ -52,15 +52,15 @@ h1{
 }
 
 .subtitle {
-    font-size: 50px;
-    margin-top: 4rem;
+    font-size: 30px;
+    margin-top: 1rem;
 }
 
 .main-image {
     object-fit: cover;
-    width: 90%;
-    height: 1300px;
-    margin-top: 8rem;
+    width: 70%;
+    height: 600px;
+    margin-top: 3rem;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -68,8 +68,8 @@ h1{
 }
 
 .h2-container {
-    width: 1200px;
-    height: 200px;
+    width: 600px;
+    height: 150px;
     background-color: rgb(232, 193, 53);  
     border-radius: 50%;
     margin-left: auto;
@@ -77,12 +77,14 @@ h1{
     display: flex;               
     justify-content: center;    
     align-items: center; 
-    margin-top: 15rem; 
+    margin-top: 5rem; 
     margin-bottom: 3rem;
+    border: 4px, solid, blue;
+    box-shadow: 15px 15px 10px rgba(0, 0, 255, 0.5);
 }
 
 .h2-container p {
-    font-size: 100px;
+    font-size: 60px;
 }
 
 .main-cast {
@@ -92,10 +94,10 @@ h1{
 
 .cast {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin-top: 15rem;
+    gap: 5px;
+    margin-top: 5rem;
 }
 
 .character {
@@ -103,17 +105,26 @@ h1{
     display: flex; 
     flex-direction: column; 
     align-items: center; 
+    
 }
 .character img {
     object-fit: cover;
-    width: 450px;
-    height: 800px;
+    width: 300px;
+    height: 400px;
     transition: all 0.3s ease; 
     transform: scale(1); 
-    box-shadow: 0px 5px 15px black;
-  
+    box-shadow: 0px 5px 15px blue;
+    
 }
 
+figcaption {
+ color: rgb(232, 193, 53);
+}
+
+.name {
+    font-size: 40px;
+    margin-top: 0.5rem;
+}
 .character img:hover {
     transform: scale(1.1); 
     box-shadow: 0px 15px 30px blue;
@@ -147,6 +158,7 @@ h1{
     width: 80%; 
     max-width: 1000px; 
     z-index: 999;
+    
 }
 
 .answers {
@@ -252,34 +264,26 @@ button.inactive {
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 40px rgba(255, 255, 255, 0.8);
 }
 
-figcaption {
- color: rgb(244, 209, 36);
-}
-
-.name {
-    font-size: 60px;
-    margin-top: 0.5rem;
-}
 
 .buttons{
     display: flex;
     justify-content: center;
-    justify-content: space-around;
+    gap: 5rem;
     
 }
 
 .buttons a {
-    margin-top: 15rem;
+    margin-top: 7rem;
+    border: 4px, solid, blue;
+    box-shadow: 15px 15px 10px rgba(0, 0, 255, 0.5);
 }
 
 .first-button {
     background-color: rgb(232, 193, 53);
     color:rgb(211, 3, 3);
-    margin-top: 4rem;
-    margin-bottom: 1rem;
-    width: 40rem;
+    width: 25rem;
     height: 7rem;
-    font-size: 60px;
+    font-size: 30px;
     border-radius: 50%;
     display: flex;                
     justify-content: center;
@@ -299,11 +303,9 @@ figcaption {
 .second-button {
     background-color: rgb(232, 193, 53);
     color:rgb(211, 3, 3);
-    margin-top: 4rem;
-    margin-bottom: 1rem;
-    width: 40rem;
+    width: 25rem;
     height: 7rem;
-    font-size: 60px;
+    font-size: 30px;
     border-radius: 50%;
     display: flex;                
     justify-content: center;
@@ -323,13 +325,15 @@ figcaption {
 .bonus-option {
     background-color: rgb(232, 193, 53);
     color:rgb(211, 3, 3);
-    margin-top: 15rem;
+    border: 4px, solid, blue;
+    box-shadow: 15px 15px 10px rgba(0, 0, 255, 0.5);
+    margin-top: 7rem;
     margin-bottom: 1rem;
     margin-left: auto;
     margin-right: auto;
-    width: 40rem;
+    width: 30rem;
     height: 7rem;
-    font-size: 60px;
+    font-size: 50px;
     border-radius: 50%;
     display: block;                
     justify-content: center;
@@ -348,9 +352,10 @@ figcaption {
 
 .score-keeper {
     display: flex;
-    justify-content: space-around;
-    margin-top: 10rem;
-    font-size: 60px;
+    justify-content: center;
+    gap: 8rem;
+    margin-top: 5rem;
+    font-size: 40px;
     color: rgb(232, 193, 53);
 }
 
@@ -367,99 +372,102 @@ figcaption {
 
 
 .play-container {
-    width: 95%; 
-    max-width: 1800px;
-    height: 1000px; 
+    width: 65%; 
+    max-width: 1000px;
+    height: 400px; 
     background-color: rgb(232, 193, 53);
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15rem;
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem; 
+    padding: 1rem; 
 }
 
 .play-container h2 {
-    font-size: 90px;
+    font-size: 40px;
     color: rgb(211, 3, 3);
+    margin-top: 2px;
 }
 
 .play-container p {
     margin-right: 2rem; 
-    margin-left: 2rem;  
-    margin-top: 1rem;   
-    font-size: 40px;
+    margin-left: 2rem; 
+    margin-top: 2px; 
+    font-size: 20px;
     color: rgb(211, 3, 3);
     word-wrap: break-word;  
     overflow-wrap: break-word; 
     text-align: center; 
-    line-height: 1.5; 
+    line-height: 1.4; 
 }
 
 
 .bonus-container {
-    width: 95%; 
-    max-width: 1800px;
-    height: 900px; 
+    width: 65%; 
+    max-width: 1000px;
+    height: 400px; 
     background-color: rgb(232, 193, 53);
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15rem;
+    margin-top: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem; 
+    padding: 1rem
 }
 
 .bonus-container h2 {
-    font-size: 90px;
+    font-size: 40px;
     color: rgb(211, 3, 3);
+    margin-top: 2px;
 }
 
 .bonus-container p {
     margin-right: 2rem; 
-    margin-left: 2rem;  
-    margin-top: 1rem;   
-    font-size: 40px;
+    margin-left: 2rem; 
+    margin-top: 20px; 
+    font-size: 20px;
     color: rgb(211, 3, 3);
     word-wrap: break-word;  
     overflow-wrap: break-word; 
     text-align: center; 
-    line-height: 1.5; 
+    line-height: 1.4; 
 }
 .fun-container {
-    width: 95%; 
-    max-width: 1800px;
-    height: 600px; 
+    width: 65%; 
+    max-width: 1000px;
+    height: 200px; 
     background-color: rgb(232, 193, 53);
     border-radius: 50%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 15rem;
-    margin-bottom: 10rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem; 
+    padding: 1rem
 }
 
 .fun-container h2 {
-    font-size: 90px;
+    font-size: 40px;
     color: rgb(211, 3, 3);
+    margin-top: 2px;
 }
 
 .fun-container p {
     margin-right: 2rem; 
-    margin-left: 2rem;  
-    margin-top: 1rem;   
-    font-size: 40px;
+    margin-left: 2rem; 
+    margin-top: -5px; 
+    font-size: 20px;
     color: rgb(211, 3, 3);
     word-wrap: break-word;  
     overflow-wrap: break-word; 
     text-align: center; 
-    line-height: 1.5; 
+    line-height: 1.4;
 }
 
