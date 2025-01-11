@@ -2,6 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const startButton = document.querySelector(".second-button");
+  const howToPlayButton = document.querySelector(".first-buttons");
   const allCharacterImages = document.querySelectorAll(".character img");
   const questionContainer = document.querySelector(".question-container");
   const questionTitle = document.querySelector("#question-title");
@@ -20,12 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const submitBonusAnswerButton = document.querySelector("#submitBonusAnswer");
   const backgroundMusic = document.getElementById("backgroundMusic");
 
-  const clickSound = document.getElementById("clickSound");
-  const clickableButtons = document.querySelectorAll(".clickable");
-
 
   startButton.classList.add("start-button-glow");
   bonusButton.style.display = "block";
+
 
   let score = 0;
   let wrongAnswers = 0;
@@ -427,12 +426,12 @@ document.addEventListener("DOMContentLoaded", () => {
     gameStarted = true;
   }
 
-  startButton.addEventListener("click", () => {
+    startButton.addEventListener("click", () => {
     startGameEffects();
     bonusButton.classList.remove("inactive");
-    clickSound.play();
+    
   });
-
+  
   document.body.appendChild(backgroundOverlay);
   backgroundOverlay.classList.add("background-overlay");
   allCharacterImages.forEach((image) => {
@@ -440,6 +439,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!gameStarted) {
         alert("Please start the game first!");
         return;
+        
       }
       if (!bonusButtonActive) {
         const character = this.id;
@@ -747,7 +747,7 @@ document.addEventListener("DOMContentLoaded", () => {
       score += 10;
       updateScoreDisplay();
 
-      alert("Correct! You earned 10 points for the bonus question! 🎉");
+      alert("Correct! You earned 10 points for the bonus question! Continue on to regular mode or,  if you feel daring enough, choose another bonus question! 🎉");
 
       if (score >= 40 && !document.querySelector(".win-message")) {
         backgroundOverlay.style.display = "block";
