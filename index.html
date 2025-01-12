@@ -2,19 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta  name="viewport", content="width=device-width, initial-scale = 1.0"/>
+    <meta name="viewport" , content="width=device-width, initial-scale = 1.0" />
     <title>Seinfeld Trivia Game</title>
     <link rel="stylesheet" href="styles/styles.css" />
     <script src="script/script.js" defer></script>
   </head>
   <body>
-    
     <div class="audio">
-        <audio id="backgroundMusic" src="audio/Seinfeld.mp3" loop></audio>
-    </div>
-
-    <div class="button-audio">
-        <audio id="clickSound" src="audio/pick-92276.mp3" preload="auto"></audio>
+      <audio id="backgroundMusic" src="audio/Seinfeld.mp3" loop></audio>
     </div>
 
     <div class="oval-container">
@@ -25,7 +20,11 @@
         </p>
       </div>
     </div>
-    <img class="main-image" src="seinfeldposter.jpg" alt="Seinfeld Cast Poster" />
+    <img
+      class="main-image"
+      src="seinfeldposter.jpg"
+      alt="Seinfeld Cast Poster"
+    />
 
     <div class="h2-container">
       <p class="main-cast">Main Cast</p>
@@ -33,34 +32,53 @@
 
     <div class="cast">
       <div class="character">
-        <img src="jerryseinfeld.jpg" class="character-image" id="jerry" alt="Jerry">
+        <img
+          src="jerryseinfeld.jpg"
+          class="character-image"
+          id="jerry"
+          alt="Jerry"
+        />
         <figcaption class="name">Jerry</figcaption>
       </div>
 
       <div class="character">
-        <img src="elainebenes.jpg" class="character-image" id="elaine" alt="Elaine">
+        <img
+          src="elainebenes.jpg"
+          class="character-image"
+          id="elaine"
+          alt="Elaine"
+        />
         <figcaption class="name">Elaine</figcaption>
       </div>
 
       <div class="character">
-        <img src="georgeconstanza.jpg" class="character-image" id="george" alt="George">
+        <img
+          src="georgeconstanza.jpg"
+          class="character-image"
+          id="george"
+          alt="George"
+        />
         <figcaption class="name">George</figcaption>
       </div>
 
       <div class="character">
-        <img src="kramer.jpg" class="character-image" id="kramer" alt="Kramer">
+        <img
+          src="kramer.jpg"
+          class="character-image"
+          id="kramer"
+          alt="Kramer"
+        />
         <figcaption class="name">Kramer</figcaption>
       </div>
     </div>
 
-    <div class="question-container"     style="display: none;">
-        <h2 id="question-title"></h2>
-        <div id="answers-container">
-        </div>
+    <div class="question-container" style="display: none">
+      <h2 id="question-title"></h2>
+      <div id="answers-container"></div>
     </div>
 
     <div class="buttons">
-      <a href="#how-to-play" class="first-button" > How to Play </a>
+      <a href="#how-to-play" class="first-button"> How to Play </a>
       <a href="#start-seinfeld-trivia" class="second-button">
         Start Seinfeld Trivia
       </a>
@@ -68,11 +86,19 @@
 
     <button class="bonus-option inactive">Bonus Question</button>
 
-    <div class="bonus-question-container" id="bonusQuestionContainer" style="display: none;">
-        <h2 id="bonusQuestionTitle">Bonus Question</h2>
-        <input type="text" id="bonusAnswerInput" placeholder="Type your answer here">
-        <button id="submitBonusAnswer" type="submit">Submit</button>
-        <div id="bonusFeedback"></div>
+    <div
+      class="bonus-question-container"
+      id="bonusQuestionContainer"
+      style="display: none"
+    >
+      <h2 id="bonusQuestionTitle">Bonus Question</h2>
+      <input
+        type="text"
+        id="bonusAnswerInput"
+        placeholder="Type your answer here"
+      />
+      <button id="submitBonusAnswer" type="submit">Submit</button>
+      <div id="bonusFeedback"></div>
     </div>
 
     <div class="score-keeper">
@@ -142,10 +168,12 @@
     </section>
 
     <footer class="copyright">
-        <p>&copy;<span class="special-word">Atlantica</span><b>DESIGNS</b> 2024.<br>
-        All images and audio used in this Trivia Game are for educational purposes only.
-        </p>
+      <p>
+        &copy;<span class="special-word">Atlantica</span
+        ><b>DESIGNS</b> 2024.<br />
+        All images and audio used in this Trivia Game are for educational
+        purposes only.
+      </p>
     </footer>
-
   </body>
 </html>

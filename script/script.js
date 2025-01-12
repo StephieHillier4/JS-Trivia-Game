@@ -679,6 +679,13 @@ document.addEventListener("DOMContentLoaded", () => {
       george: false,
       kramer: false,
     };
+    allAnsweredBonus = {
+        jerry: false,
+        elaine: false,
+        george: false,
+        kramer: false,
+      };
+      bonusAnswersContainer.value = "";
 
     updateScoreDisplay();
   }
